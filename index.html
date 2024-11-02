@@ -1,52 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Terence Tabeau | 𝐓𝐔𝐑𝐁𝐎</title>
 	<meta name="description" content="🚬">
 	<style>
-		body,
-		html {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			height: 100%;
+	  :root {
+		--brand-primary: #44D688;
+		--font-family-display: Monoton, Arial, sans-serif;
+		--font-family-primary: 'Rubik', Arial, sans-serif;
+		--neon-effect: 0 0 0 transparent,
+		  0 0 20px rgb(255, 0, 0),
+		  0 0 50px rgba(255, 0, 0, .5),
+		  0 0 200px rgba(255, 0, 0, .5),
+		  0 0 250px rgba(255, 0, 0, 1),
+		  0 0 300px rgba(255, 0, 0, 1),
+		  -250px -100px 100px rgba(255, 0, 0, 1);
+	  }
+
+	  * {
+		box-sizing: border-box;
+	  }
+
+	  html,
+	  body {
+		background-color: #000000;
+		font-family: var(--font-family-primary);
+		line-height: 1.42;
+	  }
+
+	  .hero {
+		background-color: #000000;
+		/*background: radial-gradient(ellipse at 33% 0%, #032756 0%, #110935 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		background: radial-gradient(ellipse at 33% 0%, #333 0%, #000 66%);
+	  }
+
+	  .hero-wrapper {
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		width: 400px;
+	  }
+
+	  .hero-block {
+		padding: 60px 0;
+		text-align: center;
+	  }
+
+	  .hero-title {
+		animation: neon-blink 5s infinite alternate;
+		color: #FF8888;
+		font-family: var(--font-family-display);
+		font-size: 45px;
+		font-weight: normal;
+		margin: 0 auto;
+		margin-bottom: 60px;
+		margin-left: 2em;
+		text-align: left;
+		text-shadow: var(--neon-effect);
+		text-transform: uppercase;
+		transform: skew(0, -12deg) rotateZ(5deg);
+		white-space: nowrap;
+	  }
+
+	  @media (min-width: 992px) {
+		.hero-title {
+		  font-size: 86px;
+		  margin-bottom: 100px;
+		  margin-left: 1.5em;
+		}
+	  }
+
+	  .hero-title strong {
+		display: block;
+		font-weight: normal;
+		text-indent: -1.66em;
+	  }
+
+	  @keyframes neon-blink {
+		44% {
+		  opacity: 1;
 		}
 
-		.logo-container {
-			width: 100%;
-			margin-top: 2vw;
-			display: flex;
-			justify-content: center;
+		45% {
+		  opacity: .7;
 		}
 
-		.logo-container img {
-			width: clamp(5rem, calc(10rem + 16.5vw), 20rem);
+		46% {
+		  opacity: 1;
 		}
 
-		.main-kaleido {
-			width: 100vw;
-			height: 100vh;
-			position: relative;
+		98% {
+		  opacity: 1;
 		}
 
-		.hide {
-			display: none;
+		99% {
+		  opacity: .5;
 		}
+
+		100% {
+		  opacity: 1;
+		}
+	  }
+
+	  body,
+	  html {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	  }
+
+	  .logo-container {
+		width: 100%;
+		margin-top: 2vw;
+		display: flex;
+		justify-content: center;
+	  }
+
+	  .logo-container img {
+		width: clamp(5rem, calc(10rem + 16.5vw), 20rem);
+	  }
+
+	  .main-kaleido {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+	  }
+
+	  .hide {
+		display: none;
+	  }
+
+	  .social-links {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+
+	  .social-links a {
+		color: #fff;
+		text-decoration: none;
+		margin: 10px 0;
+		font-size: 24px;
+		transition: color 0.3s;
+	  }
+
+	  .social-links a:hover {
+		color: #1db954;
+	  }
 	</style>
+	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 	<meta property="og:title" content="Terence Tabeau | 𝐓𝐔𝐑𝐁𝐎" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://terencetabeau.com" />
 	<meta property="og:image" content="https://terencetabeau.com/terbo.jpg" />
-	<script defer src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
-	<script defer src="https://cdn.jsdelivr.net/gh/the-lazy-god/tlg-kaleidoscope@v2.0.1/tlg-kaleidoscope.min.js"></script>
-</head>
-
-<body>
-	<div class="main-kaleido" tlg-kaleidoscope-motion="2" tlg-kaleidoscope-canvas="" tlg-kaleidoscope-segments="3" tlg-kaleidoscope-scale="2" tlg-kaleidoscope-mode="loop" class="kaleidoscope_canvas" style="position: relative;"><img class="hide" src="terbo.jpg" tlg-kaleidoscope-image=""></div>
+	<script defer src="three.js"></script>
+	<script defer src="kaleidoscope.js"></script>
+  </head>
+  <body>
+	<div class="main-kaleido" tlg-kaleidoscope-motion="2" tlg-kaleidoscope-canvas="" tlg-kaleidoscope-segments="3" tlg-kaleidoscope-scale="2" tlg-kaleidoscope-mode="loop" class="kaleidoscope_canvas" style="position: relative;">
+	  <img class="hide" src="terbo.jpg" tlg-kaleidoscope-image="">
+	  <div class="hero">
+		<div class="hero-wrapper">
+		  <div class="hero-block">
+			<h1 class="hero-title">
+			  <span class="hero-title-text">
+				<strong>Terence Tabeau</strong>
+			  </span>
+			</h1>
+		  </div>
+		</div>
+	  </div>
+	  <div class="social-links">
+		<a href="https://soundcloud.com/yourprofile" target="_blank">SoundCloud</a>
+		<a href="https://youtube.com/yourprofile" target="_blank">YouTube</a>
+		<a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+		<a href="https://ra.co/dj/yourprofile" target="_blank">Resident Advisor</a>
+	  </div>
 	</div>
-</body>
-
+	</div>
+  </body>
 </html>
