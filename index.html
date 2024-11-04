@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<title>Terence Tabeau</title>
-	<meta name="description" content="🚬">
+	<meta content="🚬" name="description" />
 	<style>
 		html {
 			background-color: #212121;
@@ -44,7 +45,7 @@
 		}
 
 		.hero-block {
-			padding: 60px 0;
+			padding: 4rem 0 0 0;
 			text-align: center;
 		}
 
@@ -55,7 +56,7 @@
 			font-size: 45px;
 			font-weight: normal;
 			margin: 0 auto;
-			margin-bottom: 60px;
+			margin-bottom: 2rem;
 			margin-left: 1.3em;
 			text-align: left;
 			text-shadow: var(--neon-effect);
@@ -135,38 +136,70 @@
 		.social-links a:hover {
 			color: #b92a2a;
 		}
+
+		.book-button {
+			color: #FF8888;
+			border: 2px solid #FF8888;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			letter-spacing: .5rem;
+			text-decoration: none;
+			margin-top: 20px;
+			transition: color 0.3s, background-color 0.3s;
+		}
+
+		.book-button:hover {
+			color: #b92a2a;
+			background-color: #FF8888;
+		}
+
+		.hero-title {
+			opacity: 0;
+			animation: fadeIn 2s ease-in-out 1s forwards, neon-blink 5s infinite alternate;
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
 	</style>
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="TT" />
-	<link rel="manifest" href="/site.webmanifest" />
-	<meta property="og:url" content="https://terencetabeau.com">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Terence Tabeau">
-	<meta property="og:description" content="🚬">
-	<meta property="og:image" content="https://terencetabeau.com/terbo.jpg">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta property="twitter:domain" content="terencetabeau.com">
-	<meta property="twitter:url" content="https://terencetabeau.com">
-	<meta name="twitter:title" content="Terence Tabeau">
-	<meta name="twitter:description" content="🚬">
-	<meta name="twitter:image" content="https://terencetabeau.com/terbo.jpg">
-	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-	<script defer src="three.js"></script>
-	<script defer src="kaleidoscope.js"></script>
+	<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+	<link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+	<link href="/favicon.ico" rel="shortcut icon" />
+	<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+	<meta content="TT" name="apple-mobile-web-app-title" />
+	<link href="/site.webmanifest" rel="manifest" />
+	<meta content="https://terencetabeau.com" property="og:url">
+	<meta content="website" property="og:type" />
+	<meta content="Terence Tabeau" property="og:title" />
+	<meta content="🚬" property="og:description" />
+	<meta content="https://terencetabeau.com/terence.jpg" property="og:image" />
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="terencetabeau.com" property="twitter:domain" />
+	<meta content="https://terencetabeau.com" property="twitter:url" />
+	<meta content="Terence Tabeau" name="twitter:title" />
+	<meta content="🚬" name="twitter:description" />
+	<meta content="https://terencetabeau.com/terence.jpg" name="twitter:image" />
+	<link href="https://fonts.googleapis.com/css2?family=Monoton&amp;display=swap" rel="stylesheet" />
+	<script defer="" src="three.js"></script>
+	<script defer="" src="kaleidoscope.js"></script>
+	</meta>
 </head>
 
 <body>
-	<div class="main" tlg-kaleidoscope-motion="2" tlg-kaleidoscope-canvas="" tlg-kaleidoscope-segments="3" tlg-kaleidoscope-scale="2" tlg-kaleidoscope-mode="loop" class="kaleidoscope_canvas" style="position: relative;">
-		<img class="hide" src="terbo.jpg" tlg-kaleidoscope-image="">
+	<div class="kaleidoscope_canvas" style="position: relative;" tlg-kaleidoscope-canvas="" tlg-kaleidoscope-mode="loop" tlg-kaleidoscope-motion="2" tlg-kaleidoscope-scale="2" tlg-kaleidoscope-segments="3">
+		<img class="hide" src="terbo.jpg" tlg-kaleidoscope-image="" />
 		<div class="hero">
 			<div class="hero-wrapper">
 				<div class="hero-block">
 					<h1 class="hero-title">
 						<span class="hero-title-text">
-							<strong>Terence<br>Tabeau</strong>
+							<strong>Terence<br />Tabeau</strong>
 						</span>
 					</h1>
 				</div>
@@ -177,8 +210,8 @@
 			<a href="https://www.youtube.com/results?search_query=%22terence+tabeau%22" target="_blank">YouTube</a>
 			<a href="https://www.instagram.com/terencetabeau/" target="_blank">Instagram</a>
 			<a href="https://ra.co/dj/terencetabeau" target="_blank">Resident Advisor</a>
+			<a class="book-button" href="https://www.insomniac.com/music/artists/terence-tabeau/">Booking</a>
 		</div>
-	</div>
 	</div>
 </body>
 
