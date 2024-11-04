@@ -135,6 +135,36 @@
 		.social-links a:hover {
 			color: #b92a2a;
 		}
+		.book-button {
+			color: #FF8888;
+			border: 2px solid #FF8888;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			letter-spacing: .5rem;
+			text-decoration: none;
+			margin-top: 20px;
+			transition: color 0.3s, background-color 0.3s;
+		}
+		
+		.book-button:hover {
+			color: #b92a2a;
+			background-color: #FF8888;
+		}
+		
+		.hero-title {
+			opacity: 0;
+			animation: fadeIn 2s ease-in-out 1s forwards, neon-blink 5s infinite alternate;
+		}
+		
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+		
+			100% {
+				opacity: 1;
+			}
+		}
 	</style>
 	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -146,13 +176,13 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Terence Tabeau">
 	<meta property="og:description" content="🚬">
-	<meta property="og:image" content="https://terencetabeau.com/terbo.jpg">
+	<meta property="og:image" content="https://terencetabeau.com/terence.jpg">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="twitter:domain" content="terencetabeau.com">
 	<meta property="twitter:url" content="https://terencetabeau.com">
 	<meta name="twitter:title" content="Terence Tabeau">
 	<meta name="twitter:description" content="🚬">
-	<meta name="twitter:image" content="https://terencetabeau.com/terbo.jpg">
+	<meta name="twitter:image" content="https://terencetabeau.com/terence.jpg">
 	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 	<script defer src="three.js"></script>
 	<script defer src="kaleidoscope.js"></script>
@@ -177,6 +207,7 @@
 			<a href="https://www.youtube.com/results?search_query=%22terence+tabeau%22" target="_blank">YouTube</a>
 			<a href="https://www.instagram.com/terencetabeau/" target="_blank">Instagram</a>
 			<a href="https://ra.co/dj/terencetabeau" target="_blank">Resident Advisor</a>
+			<a class="book-button" href="https://www.insomniac.com/music/artists/terence-tabeau/">Booking</a>
 		</div>
 	</div>
 	</div>
