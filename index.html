@@ -156,6 +156,11 @@
 			animation: fadeIn 2s ease-in-out 1s forwards, neon-blink 5s infinite alternate;
 			animation-delay: 1s;
 		}
+		.fadein {
+			opacity: 0;
+			animation: fadeIn 2s ease-in-out 1s forwards;
+			animation-delay: 2s;
+		}
 		
 		@keyframes fadeIn {
 			0% {
@@ -191,7 +196,7 @@
 
 <body>
 	<div class="main" tlg-kaleidoscope-motion="2" tlg-kaleidoscope-canvas="" tlg-kaleidoscope-segments="3" tlg-kaleidoscope-scale="2" tlg-kaleidoscope-mode="loop" class="kaleidoscope_canvas" style="position: relative;">
-		<img class="hide" src="terbo.jpg" tlg-kaleidoscope-image="">
+		<img class="hide" src="/terbo.jpg" tlg-kaleidoscope-image="">
 		<div class="hero">
 			<div class="hero-wrapper">
 				<div class="hero-block">
@@ -203,7 +208,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="social-links">
+		<div class="social-links fadein">
 			<a href="https://soundcloud.com/search?q=%22terence%20tabeau%22" target="_blank">SoundCloud</a>
 			<a href="https://www.youtube.com/results?search_query=%22terence+tabeau%22" target="_blank">YouTube</a>
 			<a href="https://www.instagram.com/terencetabeau/" target="_blank">Instagram</a>
