@@ -23,6 +23,8 @@
 	<meta name="twitter:title" content="Terence Tabeau">
 	<meta name="twitter:description" content="The Miami French native has been living off the wild and the uncertain. A penchant for the out there, in what’s out there.">
 	<meta name="twitter:image" content="https://terencetabeau.com/terence.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 	<script defer src="three.js"></script>
 	<script defer src="kaleidoscope.js"></script>
@@ -194,6 +196,23 @@
 			}
 		}
 	</style>
+	<script>
+		function redirectToSoundCloud() {
+			const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+			const searchQuery = encodeURIComponent('terence tabeau');
+
+			if (/android/i.test(userAgent)) {
+				// Android device
+				window.location.href = `soundcloud://sounds:search?q=${searchQuery}`;
+			} else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+				// iOS device
+				window.location.href = `soundcloud://sounds:search?q=${searchQuery}`;
+			} else {
+				// Other devices, open the web link
+				window.location.href = 'https://soundcloud.com/search?q=%22terence%20tabeau%22';
+			}
+		}
+	</script>
 </head>
 
 <body>
